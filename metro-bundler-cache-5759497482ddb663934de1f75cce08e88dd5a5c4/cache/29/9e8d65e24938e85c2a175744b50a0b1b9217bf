@@ -1,0 +1,189 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./../../react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _jsxFileName = '/Users/francoperez/Desktop/React/PubProject/node_modules/react-native-circular-progress/src/CircularProgress.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactNative = require('react-native');
+
+var _path = require('art/metrics/path');
+
+var _path2 = _interopRequireDefault(_path);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  CircularProgress: {
+    displayName: 'CircularProgress'
+  }
+};
+
+var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
+  filename: '/Users/francoperez/Desktop/React/PubProject/node_modules/react-native-circular-progress/src/CircularProgress.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _reactTransformHmrLibIndexJs2(Component, id);
+  };
+}
+
+var Surface = _reactNative.ART.Surface,
+    Shape = _reactNative.ART.Shape,
+    Path = _reactNative.ART.Path,
+    Group = _reactNative.ART.Group;
+
+var CircularProgress = _wrapComponent('CircularProgress')(function (_React$Component) {
+  _inherits(CircularProgress, _React$Component);
+
+  function CircularProgress() {
+    _classCallCheck(this, CircularProgress);
+
+    return _possibleConstructorReturn(this, (CircularProgress.__proto__ || Object.getPrototypeOf(CircularProgress)).apply(this, arguments));
+  }
+
+  _createClass(CircularProgress, [{
+    key: 'circlePath',
+    value: function circlePath(cx, cy, r, startDegree, endDegree) {
+
+      var p = Path();
+      p.path.push(0, cx + r, cy);
+      p.path.push(4, cx, cy, r, startDegree * Math.PI / 180, endDegree * Math.PI / 180, 1);
+      return p;
+    }
+  }, {
+    key: 'extractFill',
+    value: function extractFill(fill) {
+      return Math.min(100, Math.max(0, fill));
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          size = _props.size,
+          width = _props.width,
+          backgroundWidth = _props.backgroundWidth,
+          tintColor = _props.tintColor,
+          backgroundColor = _props.backgroundColor,
+          style = _props.style,
+          rotation = _props.rotation,
+          linecap = _props.linecap,
+          children = _props.children;
+
+      var backgroundPath = this.circlePath(size / 2, size / 2, size / 2 - width / 2, 0, 360 * .9999);
+
+      var fill = this.extractFill(this.props.fill);
+      var circlePath = this.circlePath(size / 2, size / 2, size / 2 - width / 2, 0, 360 * .9999 * fill / 100);
+      var offset = size - width * 2;
+      return _react3.default.createElement(
+        _reactNative.View,
+        { style: style, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30
+          }
+        },
+        _react3.default.createElement(
+          Surface,
+          {
+            width: size,
+            height: size, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 31
+            }
+          },
+          _react3.default.createElement(
+            Group,
+            { rotation: rotation - 90, originX: size / 2, originY: size / 2, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 34
+              }
+            },
+            _react3.default.createElement(Shape, { d: backgroundPath,
+              stroke: backgroundColor,
+              strokeWidth: backgroundWidth != null ? backgroundWidth : width, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 35
+              }
+            }),
+            _react3.default.createElement(Shape, { d: circlePath,
+              stroke: tintColor,
+              strokeWidth: width,
+              strokeCap: linecap, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 38
+              }
+            })
+          )
+        ),
+        children && _react3.default.createElement(
+          _reactNative.View,
+          {
+            style: {
+              position: 'absolute',
+              left: width,
+              top: width,
+              width: offset,
+              height: offset,
+              borderRadius: offset / 2,
+              alignItems: 'center',
+              justifyContent: 'center'
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 44
+            }
+          },
+          children(fill)
+        )
+      );
+    }
+  }]);
+
+  return CircularProgress;
+}(_react3.default.Component));
+
+exports.default = CircularProgress;
+
+
+CircularProgress.propTypes = {
+  style: _reactNative.ViewPropTypes.style,
+  size: _propTypes2.default.number.isRequired,
+  fill: _propTypes2.default.number.isRequired,
+  width: _propTypes2.default.number.isRequired,
+  backgroundWidth: _propTypes2.default.number,
+  tintColor: _propTypes2.default.string,
+  backgroundColor: _propTypes2.default.string,
+  rotation: _propTypes2.default.number,
+  linecap: _propTypes2.default.string,
+  children: _propTypes2.default.func
+};
+
+CircularProgress.defaultProps = {
+  tintColor: 'black',
+  backgroundColor: '#e4e4e4',
+  rotation: 90,
+  linecap: 'butt'
+};
