@@ -33,6 +33,55 @@ var styles = StyleSheet.create({
   textBold: {
     fontWeight: '500',
     color: '#000'
+  },
+  toolbar:{
+      backgroundColor:'#E92F16',
+      paddingTop:30,
+      paddingBottom:10,
+      flexDirection:'row'
+  },
+  toolbarButton:{
+      width: 50,
+      color:'#fff',
+      textAlign:'center'
+  },
+  toolbarTitle:{
+      color:'#fff',
+      textAlign:'center',
+      fontWeight:'bold',
+      flex: 1
+  },
+  item: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: 'white',
+    alignItems: 'center',
+    padding: 15,
+    paddingBottom: 30,
+    margin: 10,
+    marginBottom: 5,
+    borderRadius: 10
+  },
+  itemNameContainer: {
+    flex: 3,
+    marginBottom: 15
+  },
+  itemNameText: {
+    fontWeight:'bold'
+  },
+  image: {
+    flex: 0.5,
+    width: 50,
+    height: 50,
+    marginRight: 10,
+    borderRadius: 10
+  },
+  barHeader: {
+    flex: 1
+  },
+  barImage: {
+    flex: 1
   }
 });
 

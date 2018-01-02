@@ -21,7 +21,7 @@ const Navigator = StackNavigator({
   BarDetails: {
     screen: BarScreen,
     navigationOptions: {
-      headerTitle: 'Información del Bar'
+      header: null
     }
   }
 });

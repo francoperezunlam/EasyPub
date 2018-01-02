@@ -1,0 +1,206 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./../node_modules/react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _jsxFileName = '/Users/francoperez/Desktop/React/PubProject/Screens/BarScreen.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _reactNative = require('react-native');
+
+var _Styles = require('../Resources/Styles/Styles.js');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  BarScreen: {
+    displayName: 'BarScreen'
+  }
+};
+
+var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+  filename: '/Users/francoperez/Desktop/React/PubProject/Screens/BarScreen.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+  };
+}
+
+var BarScreen = _wrapComponent('BarScreen')(function (_Component) {
+  _inherits(BarScreen, _Component);
+
+  function BarScreen() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, BarScreen);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BarScreen.__proto__ || Object.getPrototypeOf(BarScreen)).call.apply(_ref, [this].concat(args))), _this), _this.collection = {
+      bars: [{ 'name': 'Papas fritas', 'description': "Minutas - Acompañamiento", 'imageUrl': 'https://facebook.github.io/react-native/docs/assets/favicon.png', 'id': 1 }, { 'name': 'Pizza', 'description': "Pizza", 'imageUrl': 'https://facebook.github.io/react-native/docs/assets/favicon.png', 'id': 2 }, { 'name': 'Cerveza', 'description': "Cervezas Artesanales", 'imageUrl': 'https://facebook.github.io/react-native/docs/assets/favicon.png', 'id': 3 }, { 'name': 'Papas fritas', 'description': "Minutas - Acompañamiento", 'imageUrl': 'https://facebook.github.io/react-native/docs/assets/favicon.png', 'id': 1 }, { 'name': 'Pizza', 'description': "Pizza", 'imageUrl': 'https://facebook.github.io/react-native/docs/assets/favicon.png', 'id': 2 }, { 'name': 'Cerveza', 'description': "Cervezas Artesanales", 'imageUrl': 'https://facebook.github.io/react-native/docs/assets/favicon.png', 'id': 3 }]
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(BarScreen, [{
+    key: 'render',
+    value: function render() {
+      var params = this.props.navigation.state.params;
+
+      return _react3.default.createElement(
+        _reactNative.View,
+        { style: _Styles.styles.container, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27
+          }
+        },
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: _Styles.styles.toolbar, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 28
+            }
+          },
+          _react3.default.createElement(_reactNative.StatusBar, {
+            backgroundColor: '#E92F16',
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 29
+            }
+          }),
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: _Styles.styles.toolbarButton, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 32
+              }
+            },
+            'Mapa'
+          ),
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: _Styles.styles.toolbarTitle, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 33
+              }
+            },
+            params.data
+          ),
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: _Styles.styles.toolbarButton, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 34
+              }
+            },
+            'Info'
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: _Styles.styles.barHeader, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 36
+            }
+          },
+          _react3.default.createElement(_reactNative.Image, {
+            style: _Styles.styles.barImage,
+            source: { uri: 'https://facebook.github.io/react/logo-og.png' },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 37
+            }
+          })
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: _Styles.styles.body, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 42
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.ScrollView,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 43
+              }
+            },
+            this.collection.bars.map(function (item, index) {
+              return _react3.default.createElement(
+                _reactNative.View,
+                { key: item.id, style: _Styles.styles.item, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 45
+                  }
+                },
+                _react3.default.createElement(_reactNative.Image, {
+                  style: _Styles.styles.image,
+                  source: { uri: item.imageUrl },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 46
+                  }
+                }),
+                _react3.default.createElement(
+                  _reactNative.View,
+                  { style: _Styles.styles.itemNameContainer, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 50
+                    }
+                  },
+                  _react3.default.createElement(
+                    _reactNative.Text,
+                    { style: _Styles.styles.itemNameText, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 51
+                      }
+                    },
+                    item.name
+                  ),
+                  _react3.default.createElement(
+                    _reactNative.Text,
+                    {
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 52
+                      }
+                    },
+                    item.description
+                  )
+                )
+              );
+            })
+          )
+        )
+      );
+    }
+  }]);
+
+  return BarScreen;
+}(_react2.Component));
+
+exports.default = BarScreen;
