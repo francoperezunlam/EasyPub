@@ -14,7 +14,7 @@ export default class QRScreen extends React.Component {
   constructor(){
     super();
     this.state = {
-      activeButton: false,
+      activeButton: true,
       qrData: undefined
     }
   }
