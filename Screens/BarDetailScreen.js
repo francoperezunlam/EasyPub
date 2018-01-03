@@ -10,7 +10,7 @@ import {
 
 import {styles} from '../Resources/Styles/Styles.js';
 
-export default class BarScreen extends Component<{}> {
+export default class BarDetailScreen extends Component<{}> {
   collection = {
       bars: [
          {'name': 'Papas fritas', 'description': "Minutas - Acompañamiento", 'imageUrl': 'https://facebook.github.io/react-native/docs/assets/favicon.png', 'id': 1},

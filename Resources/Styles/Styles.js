@@ -82,6 +82,15 @@ var styles = StyleSheet.create({
   },
   barImage: {
     flex: 1
+  },
+  mapContainer: {
+    ...StyleSheet.absoluteFillObject,
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center'
+  },
+  map: {
+    ...StyleSheet.absoluteFillObject
   }
 });
 

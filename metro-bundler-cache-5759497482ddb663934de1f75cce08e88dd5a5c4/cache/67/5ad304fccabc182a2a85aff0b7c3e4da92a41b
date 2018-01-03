@@ -10,29 +10,64 @@ var _reactNative = require('react-native');
 
 var _reactNavigation = require('react-navigation');
 
-var _BarScreen = require('./Screens/BarScreen.js');
+var _BarListScreen = require('./Screens/BarListScreen.js');
 
-var _BarScreen2 = _interopRequireDefault(_BarScreen);
+var _BarListScreen2 = _interopRequireDefault(_BarListScreen);
+
+var _BarDetailScreen = require('./Screens/BarDetailScreen.js');
+
+var _BarDetailScreen2 = _interopRequireDefault(_BarDetailScreen);
 
 var _QRScreen = require('./Screens/QRScreen.js');
 
 var _QRScreen2 = _interopRequireDefault(_QRScreen);
 
+var _GoogleMapScreen = require('./Screens/GoogleMapScreen.js');
+
+var _GoogleMapScreen2 = _interopRequireDefault(_GoogleMapScreen);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Navigator = (0, _reactNavigation.StackNavigator)({
+var tabNavigator = (0, _reactNavigation.TabNavigator)({
+  Map: {
+    screen: _GoogleMapScreen2.default,
+    navigationOptions: {
+      header: null,
+      tabBarVisible: true
+    }
+  },
   QR: {
     screen: _QRScreen2.default,
     navigationOptions: {
-      header: null
+      header: null,
+      tabBarVisible: false
     }
   },
-  BarDetails: {
-    screen: _BarScreen2.default,
+  BarList: {
+    screen: _BarListScreen2.default,
+    navigationOptions: {
+      header: null,
+      tabBarVisible: false
+    }
+  } }, {
+  initialRouteName: 'QR',
+  tabBarOptions: {
+    style: {
+      backgroundColor: '#E92F16'
+    }
+  }
+});
+
+var stackNavigator = (0, _reactNavigation.StackNavigator)({
+  Home: {
+    screen: tabNavigator
+  },
+  BarDetail: {
+    screen: _BarDetailScreen2.default,
     navigationOptions: {
       header: null
     }
   }
 });
 
-exports.default = Navigator;
+exports.default = stackNavigator;

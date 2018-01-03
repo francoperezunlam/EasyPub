@@ -47,6 +47,7 @@ export default class QRScreen extends React.Component {
   }
   showBarButton(){
     this.setState({activeButton: true, qrData: undefined})
-    this.props.navigation.navigate('BarDetails', {data: this.state.qrData})
+    console.log(this.props)
+    this.props.navigation.navigate('BarDetail', {data: this.state.qrData})
   }
 }
