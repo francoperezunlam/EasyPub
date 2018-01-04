@@ -29,9 +29,7 @@ export default class BarDetailScreen extends Component<{}> {
           <StatusBar
            backgroundColor='#E92F16'
           />
-          <Text style={styles.toolbarButton}>Mapa</Text>
           <Text style={styles.toolbarTitle}>{params.data}</Text>
-          <Text style={styles.toolbarButton}>Info</Text>
         </View>
         <View style={styles.barHeader}>
             <Image

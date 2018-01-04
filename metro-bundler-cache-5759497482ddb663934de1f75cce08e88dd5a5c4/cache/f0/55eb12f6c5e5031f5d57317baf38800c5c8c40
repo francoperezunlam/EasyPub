@@ -92,37 +92,19 @@ var BarDetailScreen = _wrapComponent('BarDetailScreen')(function (_Component) {
           }),
           _react3.default.createElement(
             _reactNative.Text,
-            { style: _Styles.styles.toolbarButton, __source: {
+            { style: _Styles.styles.toolbarTitle, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 32
               }
             },
-            'Mapa'
-          ),
-          _react3.default.createElement(
-            _reactNative.Text,
-            { style: _Styles.styles.toolbarTitle, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 33
-              }
-            },
             params.data
-          ),
-          _react3.default.createElement(
-            _reactNative.Text,
-            { style: _Styles.styles.toolbarButton, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 34
-              }
-            },
-            'Info'
           )
         ),
         _react3.default.createElement(
           _reactNative.View,
           { style: _Styles.styles.barHeader, __source: {
               fileName: _jsxFileName,
-              lineNumber: 36
+              lineNumber: 34
             }
           },
           _react3.default.createElement(_reactNative.Image, {
@@ -130,7 +112,7 @@ var BarDetailScreen = _wrapComponent('BarDetailScreen')(function (_Component) {
             source: { uri: 'https://facebook.github.io/react/logo-og.png' },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 37
+              lineNumber: 35
             }
           })
         ),
@@ -138,7 +120,7 @@ var BarDetailScreen = _wrapComponent('BarDetailScreen')(function (_Component) {
           _reactNative.View,
           { style: _Styles.styles.body, __source: {
               fileName: _jsxFileName,
-              lineNumber: 42
+              lineNumber: 40
             }
           },
           _react3.default.createElement(
@@ -146,7 +128,7 @@ var BarDetailScreen = _wrapComponent('BarDetailScreen')(function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 43
+                lineNumber: 41
               }
             },
             this.collection.bars.map(function (item, index) {
@@ -154,7 +136,7 @@ var BarDetailScreen = _wrapComponent('BarDetailScreen')(function (_Component) {
                 _reactNative.View,
                 { key: item.id, style: _Styles.styles.item, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 45
+                    lineNumber: 43
                   }
                 },
                 _react3.default.createElement(_reactNative.Image, {
@@ -162,21 +144,21 @@ var BarDetailScreen = _wrapComponent('BarDetailScreen')(function (_Component) {
                   source: { uri: item.imageUrl },
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 46
+                    lineNumber: 44
                   }
                 }),
                 _react3.default.createElement(
                   _reactNative.View,
                   { style: _Styles.styles.itemNameContainer, __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 50
+                      lineNumber: 48
                     }
                   },
                   _react3.default.createElement(
                     _reactNative.Text,
                     { style: _Styles.styles.itemNameText, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 51
+                        lineNumber: 49
                       }
                     },
                     item.name
@@ -186,7 +168,7 @@ var BarDetailScreen = _wrapComponent('BarDetailScreen')(function (_Component) {
                     {
                       __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 52
+                        lineNumber: 50
                       }
                     },
                     item.description
