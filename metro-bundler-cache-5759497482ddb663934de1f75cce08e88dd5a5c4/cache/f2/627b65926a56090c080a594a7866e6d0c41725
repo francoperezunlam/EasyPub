@@ -147,7 +147,6 @@ var QRScreen = _wrapComponent('QRScreen')(function (_React$Component) {
     key: 'showBarButton',
     value: function showBarButton() {
       this.setState({ activeButton: true, qrData: undefined });
-      console.log(this.props);
       this.props.navigation.navigate('BarDetail', { data: this.state.qrData });
     }
   }]);

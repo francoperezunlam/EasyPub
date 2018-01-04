@@ -62,7 +62,24 @@ module.exports = _wrapComponent('MyApp')(function (_React$Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MyApp.__proto__ || Object.getPrototypeOf(MyApp)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       mapRegion: null,
       lastLat: null,
-      lastLong: null
+      lastLong: null,
+      markers: [{
+        id: '1',
+        latitude: -34.630144,
+        longitude: -58.629753,
+        title: 'Antares',
+        subtitle: 'Bar muy cheto',
+        direction: 'La concha de tu vieja',
+        ref: null
+      }, {
+        id: '2',
+        latitude: -34.631173,
+        longitude: -58.629753,
+        title: 'Cervelar',
+        subtitle: 'Bar muy cheto',
+        direction: 'La concha de tu abuela',
+        ref: null
+      }]
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -93,23 +110,99 @@ module.exports = _wrapComponent('MyApp')(function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _this3 = this;
+
       return _react3.default.createElement(
         _reactNative.View,
         { style: _Styles.styles.mapContainer, __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 49
           }
         },
-        _react3.default.createElement(_reactNativeMaps2.default, {
-          style: _Styles.styles.map,
-          region: this.state.mapRegion,
-          showsUserLocation: true,
-          followUserLocation: true,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 33
-          }
-        })
+        _react3.default.createElement(
+          _reactNativeMaps2.default,
+          {
+            style: _Styles.styles.map,
+            region: this.state.mapRegion,
+            showsUserLocation: true,
+            followUserLocation: true,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 50
+            }
+          },
+          this.state.markers.map(function (marker) {
+            return _react3.default.createElement(
+              _reactNativeMaps2.default.Marker,
+              {
+                key: marker.id,
+                ref: function ref(_ref2) {
+                  marker.ref = _ref2;
+                },
+                coordinate: { latitude: marker.latitude, longitude: marker.longitude },
+                title: marker.title,
+                image: require('../Resources/Images/beer.png'),
+                description: marker.description,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 57
+                }
+              },
+              _react3.default.createElement(
+                _reactNativeMaps2.default.Callout,
+                {
+                  onPress: function onPress(e) {
+                    return _this3.props.navigation.navigate('BarDetail', { data: marker.title });
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 65
+                  }
+                },
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  { style: _Styles.styles.textBold, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 68
+                    }
+                  },
+                  marker.title
+                ),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 69
+                    }
+                  },
+                  'Descripci\xF3n: ',
+                  marker.subtitle
+                ),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 70
+                    }
+                  },
+                  'Direcci\xF3n: ',
+                  marker.direction
+                ),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  { style: (_Styles.styles.toolbarTitle, { color: '#E92F16' }), __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 71
+                    }
+                  },
+                  'Toque aqu\xED para mas detalle'
+                )
+              )
+            );
+          })
+        )
       );
     }
   }]);
