@@ -4,8 +4,7 @@ import {
   Text,
   View,
   Image,
-  ScrollView,
-  StatusBar
+  ScrollView
 } from 'react-native';
 
 import {styles} from '../Resources/Styles/Styles.js';
@@ -26,9 +25,6 @@ export default class BarDetailScreen extends Component<{}> {
     return (
       <View style={styles.container}>
         <View style={styles.toolbar}>
-          <StatusBar
-           backgroundColor='#E92F16'
-          />
           <Text style={styles.toolbarTitle}>{params.data}</Text>
         </View>
         <View style={styles.barHeader}>

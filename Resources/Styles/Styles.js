@@ -91,6 +91,10 @@ var styles = StyleSheet.create({
   },
   map: {
     ...StyleSheet.absoluteFillObject
+  },
+  icon: {
+    width: 26,
+    height: 26
   }
 });
 

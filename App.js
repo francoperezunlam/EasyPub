@@ -18,27 +18,30 @@ const tabNavigator = TabNavigator({
     screen: GoogleMapScreen,
     navigationOptions: {
       header: null,
-      tabBarVisible: true
-    },
+      tabBarVisible: true,
+      tabBarLabel: 'Mapa'
+    }
   },
   QR: {
     screen: QRScreen,
     navigationOptions: {
       header: null,
-      tabBarVisible: false
-    },
+      tabBarVisible: true,
+      tabBarLabel: 'Lectura QR'
+    }
   },
   BarList: {
     screen: BarListScreen,
     navigationOptions: {
       header: null,
-      tabBarVisible: false
+      tabBarVisible: true,
+      tabBarLabel: 'Lista'
     }
   }},{
     initialRouteName: 'QR',
     tabBarOptions: {
       style: {
-        backgroundColor: '#E92F16',
+        backgroundColor: '#E92F16'
       }
     }
   });

@@ -4,7 +4,8 @@ import {
   Button,
   Platform,
   Text,
-  View
+  View,
+  StatusBar
 } from 'react-native';
 
 import Camera from 'react-native-camera';
@@ -22,6 +23,9 @@ export default class QRScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
+          <StatusBar
+           backgroundColor='#E92F16'
+          />
           <Text>
             Busque el <Text style={styles.textBold}>código QR</Text> en la mesa para escanearlo
           </Text>

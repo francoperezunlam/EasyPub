@@ -33,21 +33,24 @@ var tabNavigator = (0, _reactNavigation.TabNavigator)({
     screen: _GoogleMapScreen2.default,
     navigationOptions: {
       header: null,
-      tabBarVisible: true
+      tabBarVisible: true,
+      tabBarLabel: 'Mapa'
     }
   },
   QR: {
     screen: _QRScreen2.default,
     navigationOptions: {
       header: null,
-      tabBarVisible: false
+      tabBarVisible: true,
+      tabBarLabel: 'Lectura QR'
     }
   },
   BarList: {
     screen: _BarListScreen2.default,
     navigationOptions: {
       header: null,
-      tabBarVisible: false
+      tabBarVisible: true,
+      tabBarLabel: 'Lista'
     }
   } }, {
   initialRouteName: 'QR',

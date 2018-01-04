@@ -76,33 +76,9 @@ var BarListScreen = _wrapComponent('BarListScreen')(function (_Component) {
         },
         _react3.default.createElement(
           _reactNative.View,
-          { style: _Styles.styles.toolbar, __source: {
-              fileName: _jsxFileName,
-              lineNumber: 27
-            }
-          },
-          _react3.default.createElement(_reactNative.StatusBar, {
-            backgroundColor: '#E92F16',
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 28
-            }
-          }),
-          _react3.default.createElement(
-            _reactNative.Text,
-            { style: _Styles.styles.toolbarTitle, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 31
-              }
-            },
-            'Lista de bares'
-          )
-        ),
-        _react3.default.createElement(
-          _reactNative.View,
           { style: _Styles.styles.body, __source: {
               fileName: _jsxFileName,
-              lineNumber: 33
+              lineNumber: 27
             }
           },
           _react3.default.createElement(
@@ -110,7 +86,7 @@ var BarListScreen = _wrapComponent('BarListScreen')(function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 34
+                lineNumber: 28
               }
             },
             this.collection.bars.map(function (item, index) {
@@ -118,7 +94,7 @@ var BarListScreen = _wrapComponent('BarListScreen')(function (_Component) {
                 _reactNative.View,
                 { key: item.id, style: _Styles.styles.item, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 36
+                    lineNumber: 30
                   }
                 },
                 _react3.default.createElement(_reactNative.Image, {
@@ -126,21 +102,21 @@ var BarListScreen = _wrapComponent('BarListScreen')(function (_Component) {
                   source: { uri: item.imageUrl },
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 37
+                    lineNumber: 31
                   }
                 }),
                 _react3.default.createElement(
                   _reactNative.View,
                   { style: _Styles.styles.itemNameContainer, __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 41
+                      lineNumber: 35
                     }
                   },
                   _react3.default.createElement(
                     _reactNative.Text,
                     { style: _Styles.styles.itemNameText, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 42
+                        lineNumber: 36
                       }
                     },
                     item.name
@@ -150,7 +126,7 @@ var BarListScreen = _wrapComponent('BarListScreen')(function (_Component) {
                     {
                       __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 43
+                        lineNumber: 37
                       }
                     },
                     item.description

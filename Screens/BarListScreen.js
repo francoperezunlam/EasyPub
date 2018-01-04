@@ -24,12 +24,6 @@ export default class BarListScreen extends Component<{}> {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.toolbar}>
-          <StatusBar
-           backgroundColor='#E92F16'
-          />
-          <Text style={styles.toolbarTitle}>Lista de bares</Text>
-        </View>
         <View style={styles.body}>
             <ScrollView>{
                   this.collection.bars.map((item, index) => (

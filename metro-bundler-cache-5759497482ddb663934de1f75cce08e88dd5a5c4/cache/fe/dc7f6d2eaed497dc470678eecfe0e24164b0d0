@@ -100,7 +100,11 @@ var styles = _reactNative.StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center'
   }),
-  map: _extends({}, _reactNative.StyleSheet.absoluteFillObject)
+  map: _extends({}, _reactNative.StyleSheet.absoluteFillObject),
+  icon: {
+    width: 26,
+    height: 26
+  }
 });
 
 exports.styles = styles;

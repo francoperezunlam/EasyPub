@@ -59,7 +59,7 @@ module.exports = class MyApp extends React.Component {
               ref={ref => {marker.ref = ref}}
               coordinate={{latitude:marker.latitude, longitude:marker.longitude}}
               title={marker.title}
-              image ={require('../Resources/Images/beer.png')}
+              image={require('../Resources/Images/beer.png')}
               description={marker.description}
             >
               <MapView.Callout
